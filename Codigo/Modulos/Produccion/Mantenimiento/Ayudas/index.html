@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Usuario - Módulo de Mantenimiento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1,h2, h3 {
+            color: #007acc;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .method {
+            background: #eaeaea;
+            padding: 10px;
+            border-left: 5px solid #007acc;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .method h4 {
+            margin: 0;
+            color: #333;
+        }
+        .method p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Guía de Usuario - Módulo de Mantenimiento</h1>
+</header>
+
+<main>
+    <section class="section">
+        <h2>Capa Modelo - Funcionalidades de Mantenimiento</h2>
+        <p>El módulo de mantenimiento permite gestionar los registros de mantenimientos realizados a las maquinarias en la base de datos de la empresa. Este módulo se conecta con la base de datos para registrar, actualizar y desactivar los mantenimientos según sea necesario.</p>
+    </section>
+
+    <section class="section">
+        <h2>Capa Control - Funciones Principales</h2>
+        <p>La capa de control sirve como intermediaria entre la vista del usuario y la base de datos. Aquí se gestionan las solicitudes realizadas por el usuario y se envían al modelo para su procesamiento.</p>
+
+        <div class="method">
+            <h4>Agregar Mantenimiento</h4>
+            <p>Permite registrar un nuevo mantenimiento para una maquinaria en el sistema. Los datos incluyen el nombre de la maquinaria, tipo, horas de operación, mantenimiento periódico, entre otros detalles.</p>
+        </div>
+
+        <div class="method">
+            <h4>Actualizar Mantenimiento</h4>
+            <p>Actualiza un registro de mantenimiento existente con la información más reciente. Ideal para modificar detalles como el próximo mantenimiento o el área donde se utiliza la maquinaria.</p>
+        </div>
+
+        <div class="method">
+            <h4>Desactivar Mantenimiento</h4>
+            <p>Desactiva un mantenimiento, marcándolo como inactivo. Esto conserva el historial sin eliminar información relevante.</p>
+        </div>
+
+        <div class="method">
+            <h4>Consultar Mantenimientos</h4>
+            <p>Permite ver todos los mantenimientos registrados en el sistema, incluidos los detalles importantes para cada maquinaria.</p>
+        </div>
+
+        <div class="method">
+            <h4>Obtener Último ID</h4>
+            <p>Consulta el último ID de maquinaria registrado para facilitar el ingreso de un nuevo mantenimiento sin duplicar IDs.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Capa Vista - Formulario de Mantenimiento</h2>
+        <p>El formulario <strong>Frm_Mantenimiento_Produccion</strong> es la interfaz de usuario para el módulo de mantenimiento. Desde aquí se pueden agregar, actualizar, desactivar y consultar mantenimientos.</p>
+
+        <h3>Opciones del Formulario</h3>
+
+        <div class="method">
+            <h4>Botón "Agregar"</h4>
+            <p>Permite agregar un nuevo mantenimiento. Completa todos los campos requeridos y presiona "Agregar" para guardarlo en el sistema.</p>
+        </div>
+
+        <div class="method">
+            <h4>Botón "Actualizar"</h4>
+            <p>Actualiza el mantenimiento seleccionado en el sistema. Selecciona un registro, modifica los datos necesarios y presiona "Actualizar".</p>
+        </div>
+
+        <div class="method">
+            <h4>Botón "Desactivar"</h4>
+            <p>Desactiva el mantenimiento seleccionado. Marca el registro como inactivo sin eliminarlo, conservando el historial.</p>
+        </div>
+
+        <div class="method">
+            <h4>DataGridView - Lista de Mantenimientos</h4>
+            <p>Muestra todos los mantenimientos en el sistema. Haz clic en un registro para visualizar y modificar los detalles en el formulario.</p>
+        </div>
+
+        <div class="method">
+            <h4>Campo "Último ID de Maquinaria"</h4>
+            <p>Muestra el último ID registrado y sugiere un nuevo ID para el próximo mantenimiento.</p>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
